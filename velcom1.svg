@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 179.48111 179.4811" width="179.481" height="179.481">
+<filter id="blur-filter" height="200%">
+<feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+</filter>
+<path d="M30.706 77.663l30.5-29.322 29.32 30.498-30.496 29.324zM90.53 78.838l30.497-29.322 29.323 30.497-30.497 29.324z" 
+fill="none" stroke="#f2db01" stroke-width="20" stroke-miterlimit="4.9" filter="url(#blur-filter)"/>
+<path d="M60.03 108.162l30.5-29.326 29.322 30.5-30.498 29.322z" fill="none" stroke="#f2db01" stroke-width="20" stroke-miterlimit="4.9" filter="url(#blur-filter)"/>
+<rect width="167.441" height="167.441" x="6.741" y="6.741" ry="28.845" fill="none" stroke="#f2db01" stroke-width="20" 
+stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4.9" filter="url(#blur-filter)"/>
+<path d="M30.706 77.663l30.5-29.322 29.32 30.498-30.496 29.324zM90.53 78.838l30.497-29.322 29.323 30.497-30.497 29.324z" 
+fill="none" stroke="white" stroke-width="7" stroke-miterlimit="4.9" />
+<path d="M60.03 108.162l30.5-29.326 29.322 30.5-30.498 29.322z" fill="none" stroke="white" stroke-width="7" stroke-miterlimit="4.9"/>
+<rect width="167.441" height="167.441" x="6.741" y="6.741" ry="28.845" fill="none" stroke="white" stroke-width="7" 
+stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4.9"/></svg>

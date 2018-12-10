@@ -1,0 +1,568 @@
+@font-face {
+    font-family: 'YanoneKaffeesatz-ExtraLight';
+    src: url(YanoneKaffeesatz-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: 'YanoneKaffeesatz-Regular';
+    src: url(YanoneKaffeesatz-Regular.ttf);
+}
+
+body {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	background-color: #030012;
+	color: #fff;
+	font-family: 'YanoneKaffeesatz-Regular', sans-serif;
+	font-size: 218%;
+	letter-spacing: .3vw;
+	word-spacing: .5vw;
+	line-height: 1.3;
+}
+
+#rekvizit_two, #hours25, #auto1, #auto2, #auto3, #trash, .truck, .loaders, .loaders_wrapper {
+	position: absolute;
+}
+
+.intro, .section, .section2, .section3, img {
+	position: relative;
+}
+
+.intro, .loaders {
+	width: 100%;
+}
+
+#hours25 {
+	opacity: 0;
+}
+
+#trash, #trash_on, #intro_perevozka, #intro_perevozka_on, #truck_light, .truck {
+	fill: none;
+}
+
+#trash_on, #truck_light, #intro_perevozka, .auto_light {
+	filter: url(#blur-filter);
+}
+
+#rekvizit_two, #auto1, #auto2, #auto3, #trash, .section, .section2, .section3, .rekvizit, .phrase_one, .phrase_two, 
+.phrase_three, .truck, .loaders_wrapper, .telefon1, .telefon2, .one, footer {
+	display: none;
+}
+
+#rekvizit_two, #hours25, #hours25_rekv, .rekvizit {
+	transform-origin: center;
+}
+
+.wrapper {
+	max-width: 1230px;
+	margin: 20px auto;
+}
+
+#intro_perevozka, #intro_perevozka_on {
+	stroke-dasharray: 278;
+	animation: intro_perevozka 5.5s linear;
+}
+
+#intro_perevozka {
+	stroke: #2000BF;
+	stroke-width: 3;
+}
+
+#intro_perevozka_on {
+	stroke: white;
+	stroke-width: 1;
+}
+	
+@keyframes intro_perevozka {
+	0% { stroke-dashoffset: 278;}
+	40% { stroke-dashoffset: 0;}	
+	70% { stroke-dashoffset: 0;}
+	100% { stroke-dashoffset: 278;}
+}
+
+#hours25, #hours25_rekv {
+	text-shadow: 0px 0px 1vw #008C01,
+				 0px 0px .5vw #008C01,
+				 0px 0px 1.5vw #008C01,
+				 0px 0px 2vw #008C01,
+				 0px 0px 2.5vw #008C01,
+				 0px 0px 3vw #008C01,
+				 0px 0px 3.5vw #008C01;
+}
+
+#hours25 {	
+	font-family: 'YanoneKaffeesatz-ExtraLight', sans-serif;
+	top: 10%;
+	left: 30%;
+	font-size: 11vw;
+	animation: hours25 5s 1.5s;	
+}
+
+@keyframes hours25 {	
+	0% { transform: scale(0.1) rotate(0deg);}
+	20% { opacity: 1;
+		 transform: scale(1.3) rotate(1785deg); }
+	22% { opacity: 1;
+		 transform: scale(.7) rotate(1785deg); }
+	24% { opacity: 1;
+		 transform: scale(1.2) rotate(1785deg); }
+	26% { opacity: 1;
+		 transform: scale(.8) rotate(1785deg); }
+	28% { opacity: 1;
+		 transform: scale(1.1) rotate(1785deg); }
+	30% { opacity: 1;
+		 transform: scale(1) rotate(1785deg); }
+	65% { opacity: 1;
+		 transform: scale(1) rotate(1785deg); }
+	80% {opacity: 0;}
+	100% { opacity: 0;
+		transform: scale(8); }
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.rekvizit {
+	font-size: 100%;
+	color: #D9A3F2;
+	animation: fadeIn 3s;
+}
+
+#rekvizit_two {
+	font-size: 116%;
+}
+
+#hours25_rekv {
+	font-size: 150%;
+	animation: hours25_two 5s infinite;
+}
+
+@keyframes hours25_two {
+	0% { transform: scale(0.1) rotate(-15deg);	}				
+	20% { transform: scale(1.2) rotate(1065deg); }
+	22% { transform: scale(.2) rotate(1065deg);	}
+	24% { transform: scale(1.35) rotate(1065deg); }
+	26% { transform: scale(.7) rotate(1065deg);	}
+	28% { transform: scale(1.1) rotate(1065deg); }
+	30% { transform: scale(.9) rotate(1065deg); }
+	32% { transform: scale(1.1) rotate(1065deg); }
+	34%{ transform: scale(1) rotate(1065deg); }
+	100%{ transform: rotate(1065deg); }
+}
+
+.telefon, .h25 {
+	text-shadow: 0px 0px .3vw #C292D9,
+				 0px 0px .5vw #C292D9,
+				 0px 0px .7vw #C292D9,
+				 0px 0px .9vw #C292D9,
+				 0px 0px 1.1vw #C292D9,
+				 0px 0px 1.3vw #C292D9,
+				 0px 0px 1.5vw #C292D9;
+}
+
+.telefon {
+	font-size: 150%;
+}
+
+.telefon1, .telefon2 {
+	animation: bounceInLeft 1s;
+}
+
+#auto1, #auto2, #auto3 {
+	fill: #030012;
+	stroke: #D9A3F2;
+	stroke-width: 2;
+	bottom: 10%;
+	z-index: -1;
+	animation: automove .6s ease-out;
+	transition: stroke 1.2s;
+}
+
+#auto1 {
+	left: 34%;
+}
+
+#auto2 {
+	left: 19%;
+}
+
+#auto3 {	
+	left: -14%;
+	bottom: 8%;
+}
+
+.auto_light {
+	fill: #949494;
+}
+
+@keyframes automove {
+	0% {transform: scale(0.1);
+		left: -55%;
+		bottom: 100%;}
+}
+
+@keyframes spark {	
+	15% {fill: #fff;
+		 stroke: #fff;}
+	20% {fill: #fff;
+		stroke: #fff;}
+	30% {fill: #949494;
+		stroke: #D9A3F2;}	
+	65% {fill: #949494;
+		stroke: #D9A3F2;}	
+	80% {fill: #fff;
+		stroke: #fff;}
+	85% {fill: #fff;
+		stroke: #fff;}
+}
+
+.section, .section2, .section3 {
+	margin-left: 18%;
+	margin-top: 40px;
+}
+
+.truck {
+	width: 9%;
+	stroke: #fff;
+	stroke-width: 2;
+ }
+
+#truck_light {
+	stroke: #EEF603;
+	stroke-width: 4;
+}
+
+.one, .two, .three {
+	text-shadow: #000 2px 2px 0, #000 -2px -2px 0, 
+                 #000 -2px 2px 0, #000 2px -2px 0;
+}
+
+.two, .three {
+	display: inline-block;
+}
+
+.one {
+	animation: jumping_letter .4s linear;
+}
+
+.two {
+	animation: jumping_letter_two 1.8s linear;
+}
+
+.three {
+	transition: all 2.2s ease;
+}
+
+@keyframes jumping_letter {	
+	0% { transform: translate(60px, -20px) scale(.5) rotate(-900deg); }
+	25% { transform: translate(55px, -65px) rotate(-550deg); }
+	30% { transform: translate(43px, -80px) scale(1.6) rotate(-400deg); }
+	35% { transform: translate(30px, -90px) scale(2.1) rotate(-250deg); }
+	40% { transform: translate(17px, -80px) scale(1.6) rotate(-100deg); }
+	45% { transform: translate(5px, -65px) rotate(50deg); }
+	55% { transform: translate(0, 7px) scale(2.3); }
+	80% { transform: translate(0, 7px) scale(2.3); } 
+}
+
+@keyframes jumping_letter_two {
+	0% { transform: translate(50px, -10px) scale(.5) rotate(85deg); }
+	5% { transform: translate(40px, -30px) scale(.9) rotate(75deg); }
+	10% { transform: translate(30px, -50px) scale(1.3) rotate(60deg); }
+	15% { transform: translate(20px, -50px) scale(1.7) rotate(50deg); }
+	30% { transform: translate(20px, -50px) scale(1.4) rotate(45deg); }
+	35% { transform: translate(18px, -46px) scale(1.7) rotate(42deg); }
+	40% { transform: translate(15px, -40px) scale(1.4) rotate(40deg); }
+	60% { transform: translate(7px, -15px) scale(1.2) rotate(25deg); }
+	70% { transform: translate(0, 6px) scale(1.3) rotate(0deg); }
+	75% { transform: translate(0, -6px) scale(.8) rotate(-10deg); }
+	80% { transform: translate(0, 6px) scale(1.3) rotate(0deg); }
+	85% { transform: translate(0, -6px) scale(.8) rotate(-10deg); }
+}
+
+@keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to { animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); }
+  0% { opacity: 0;
+	   transform: translate(-3000px, 0); }
+  60% { opacity: 1;
+		transform: translate(25px, 0); }
+  75% { transform: translate(-10px, 0); }
+  90% { transform: translate(5px, 0); }
+}
+	
+.velcom {	
+	text-shadow: 0px 0px .3vw #f2db01,
+				 0px 0px .5vw #f2db01,
+				 0px 0px .7vw #f2db01,
+				 0px 0px .9vw #f2db01,
+				 0px 0px 1.1vw #f2db01,
+				 0px 0px 1.3vw #f2db01,
+				 0px 0px 1.5vw #f2db01;
+	animation: velcom_glow 20s linear infinite;
+}
+
+@keyframes velcom_glow {
+	10%, 12%, 41%, 84%, 87%, 96% { color: black; 
+			text-shadow: none;}
+	13%, 25%, 51%, 81%, 83%, 88%, 95% { color: white; 
+		  text-shadow: 0px 0px .3vw #f2db01,
+				 0px 0px .5vw #f2db01,
+				 0px 0px .7vw #f2db01,
+				 0px 0px .9vw #f2db01,
+				 0px 0px 1.1vw #f2db01,
+				 0px 0px 1.3vw #f2db01,
+				 0px 0px 1.5vw #f2db01;}
+}
+
+@keyframes mts_glow {
+	0%, 3%, 8.1%, 10%, 40%, 80.1%, 82%{ color: black; 
+			text-shadow: none;}
+	3.1%, 8%, 10.1%, 50%, 80%, 82.1%{ color: white; 
+		  text-shadow: 0px 0px .3vw #f2db01,
+				 0px 0px .5vw #E10000,
+				 0px 0px .7vw #E10000,
+				 0px 0px .9vw #E10000,
+				 0px 0px 1.1vw #E10000,
+				 0px 0px 1.3vw #E10000,
+				 0px 0px 1.5vw #E10000; }
+}
+
+.mts {
+	text-shadow: 0px 0px .3vw #E10000,
+				 0px 0px .5vw #E10000,
+				 0px 0px .7vw #E10000,
+				 0px 0px .9vw #E10000,
+				 0px 0px 1.1vw #E10000,
+				 0px 0px 1.3vw #E10000,
+				 0px 0px 1.5vw #E10000;
+	animation: mts_glow 15s linear infinite;
+}
+
+img {
+	width: 3.5vw;
+	height: auto;
+	top: .6vw;
+}
+
+.span {
+	margin-left: 2vw;
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+}
+	
+.loaders_wrapper {	
+	left: -1%;
+	width: 17%;
+	padding-bottom: 20%;
+}
+
+.l_wrap_pos {
+	left: -200px;
+}
+
+.truck_pos {
+	left: -160px;
+}
+
+.loaders {
+	height: 100%;
+	background-image: url(loader_sprite3.svg);
+	background-repeat: no-repeat;
+	background-size: 2600%;
+}
+
+@keyframes move {	
+	to { background-position: 100% 0%; }
+}
+
+#trash_on {
+	stroke: #0000FF;
+	stroke-width: 20; 
+}
+
+#trash {
+	left: -160px;
+	width: 9%;
+	stroke: white;
+	stroke-width: 10;
+	animation: trash 1.8s;
+}
+
+@keyframes trash {
+	0% { opacity: 0; 
+		transform: translate(380%, -180%) scale(7); }
+	70% { opacity: .5; }
+}
+
+footer {
+	padding-top: 45px;
+	text-align: center;
+	animation: fadeIn 2s;
+}
+
+footer a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.5vw;
+	text-shadow: 0px 0px .3vw #190096,
+				 0px 0px .5vw #190096,
+				 0px 0px .7vw #190096,
+				 0px 0px .9vw #190096,
+				 0px 0px 1.1vw #190096,
+				 0px 0px 1.3vw #190096,
+				 0px 0px 1.5vw #190096; 
+}
+
+@media screen  and (max-width: 1440px) {
+	#rekvizit_two {left: 10vw;}
+}
+
+@media screen  and (max-width: 1366px) {
+	#rekvizit_two {left: 7.3vw;}
+}
+
+@media screen  and (max-width: 1024px) {
+	.wrapper {margin: 0 auto;}
+	.section, .section2, .section3 {margin-top: 20px;}
+	.truck_pos {left: -130px;}	
+	.truck {width: 11%;}	
+	.l_wrap_pos {left: -156px;}
+	.loaders_wrapper {width: 20%;}
+	#trash {left: -130px;
+		width: 11%;	}
+	#auto3 {bottom: 7%;}
+	#rekvizit_two {left: 4.2vw;}
+	img {width: 4.3vw;}
+}
+
+@media screen  and (max-width: 950px) {
+	.l_wrap_pos {left: -170px;}
+}
+
+@media screen  and (max-width: 812px) {	
+	.truck_pos {left: -115px;}	
+	.truck {width: 12%;}
+	.loaders_wrapper {width: 22%;}
+	#trash {left: -115px;
+		width: 12%;	}
+	#auto3 {bottom: 4%;}
+	img {width: 5vw;}
+	#rekvizit_two {left: 3.8vw;}
+	body {line-height: 1.1;}
+	.intro {width: 115%;
+			left: -60px;}
+	#hours25 {font-size: 13.5vw;}
+}
+
+@media screen  and (max-width: 806px) {
+	.l_wrap_pos {left: -140px;}
+}
+
+@media screen  and (max-width: 784px) {
+	.l_wrap_pos {left: -165px;}
+	.intro {left: -55px;}
+	#rekvizit_two {left: 3.3vw;}
+	footer a {font-size: 2.3vw;}
+	footer {padding-top: 20px;}
+}
+
+@media screen  and (max-width: 732px) {
+	.l_wrap_pos {left: -145px;}
+	footer {padding-top: 15px;}
+}
+
+@media screen  and (max-width: 700px) {	
+	body {font-size: 180%;}	
+	.telefon, #hours25_rekv {font-size: 150%;}	
+	.rekvizit {font-size: 108%;}
+	#rekvizit_two {left: 3.3vw;}
+	footer {padding-top: 10px;}
+}
+
+@media screen  and (max-width: 667px) {
+	.l_wrap_pos {left: -160px;}
+	.intro {width: 125%;
+			left: -78px;}
+}
+
+@media screen  and (max-width: 647px) {	
+	.l_wrap_pos {left: -145px;}
+}
+
+@media screen  and (max-width: 600px) {	
+	.truck_pos {left: -80px;}		
+	.l_wrap_pos {left: -105px;}
+	#trash {left: -80px;}
+	.intro {left: -73px;}
+	footer {padding-top: 0;}
+	body {font-size: 160%;}	
+	.telefon, #hours25_rekv {font-size: 145%;}	
+	.rekvizit {font-size: 105%;}
+}
+
+@media screen  and (max-width: 568px) {	
+	.intro {left: -68px;}
+}
+
+@media screen  and (max-width: 533px) {	
+	.intro {left: -63px;}
+	.l_wrap_pos {left: -115px;}
+}
+
+@media screen  and (max-width: 490px) {	
+	.header {display: block;}
+	.rekvizit, .telefon {text-align: center;}
+	#rekvizit_two {top: 0;
+				   left: 33%;}
+	.truck_pos {left: -70px;}		
+	#trash {left: -70px;
+			width: 15%;}
+	.intro {left: -58px;}
+	.l_wrap_pos {left: -115px;}
+	.telefon, #hours25_rekv {font-size: 160%;}	
+	.rekvizit {font-size: 112%;}
+	.telefon {margin-top: 10px;}
+	.truck {width: 15%;}
+	.loaders_wrapper {width: 28%;}
+	img {width: 7vw;}
+}
+
+@media screen  and (max-width: 480px) {	
+	.l_wrap_pos {left: -87px;}
+}
+
+@media screen  and (max-width: 450px) {	
+	.intro {left: -52px;}
+}
+
+@media screen  and (max-width: 400px) {	
+	.truck {width: 18%;}	
+	.loaders_wrapper {width: 36%;}
+	#trash {width: 18%;	}
+	.l_wrap_pos {left: -93px;}
+	img {width: 8.3vw;}
+	.intro {left: -45px;}
+	#rekvizit_two {left: 27%;}
+	footer a {font-size: 3vw;}
+}
+
+@media screen  and (max-width: 375px) {	
+	.truck_pos {left: -60px;}	
+	.l_wrap_pos {left: -80px;}
+	#trash {left: -60px;}
+}
+
+@media screen  and (max-width: 363px) {	
+	.l_wrap_pos {left: -95px;}
+}
+
+@media screen  and (max-width: 330px) {	
+	.l_wrap_pos {left: -77px;}
+	.intro {left: -38px;}
+	#hours25 {font-size: 15vw;}
+	img {width: 9.5vw;}
+}

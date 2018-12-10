@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135.83852 135.83851" width="135.839" height="135.839">
+<filter id="blur-filter" height="200%">
+<feGaussianBlur in="SourceGraphic" stdDeviation="6"/>
+</filter>
+<path d="M38.236 73.538c11.04-67.447 52.836-63.633 62.888 0 8.726 55.237-71.267 51.186-62.888 0z" 
+fill="none" stroke="#E10000" stroke-width="20" filter="url(#blur-filter)"/>
+<rect width="125.749" height="125.749" x="5.608" y="5.608" ry="24.928" fill="none" 
+stroke="#E10000" stroke-width="20" filter="url(#blur-filter)"/>
+<path d="M38.236 73.538c11.04-67.447 52.836-63.633 62.888 0 8.726 55.237-71.267 51.186-62.888 0z" 
+fill="none" stroke="white" stroke-width="7"/>
+<rect width="125.749" height="125.749" x="5.608" y="5.608" ry="24.928" fill="none" stroke="white" stroke-width="7"/></svg>
