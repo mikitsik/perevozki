@@ -21,6 +21,11 @@ body {
 	line-height: 1.3;
 }
 
+.telefon a {
+	text-decoration: none;
+	color: white;
+}
+
 #rekvizit_two, #hours25, #auto1, #auto2, #auto3, #trash, .truck, .loaders, .loaders_wrapper {
 	position: absolute;
 }
