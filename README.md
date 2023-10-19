@@ -1,10 +1,12 @@
 # Perevozki
 
-It is an experimental project that utilizes only vanilla js, html, css and svg. Only code to create the cartoons. No any images, gifs and other staff.
+It is an experimental project that utilizes only vanilla js, html, css and svg (from just young begginer coder)
 
-Enjoy! &#128578;
+The only code and svg to create cartoons. No any images, gifs and other stuff
 
-#### Before running the app on your local machine, clone it using one of these commands:
+[Enjoy!](https://mikitsik.github.io/perevozki/) &#128578;
+
+#### Before running the app on your local machine, clone it, using one of these commands:
 
 `git clone https://github.com/mikitsik/perevozki.git`
 
